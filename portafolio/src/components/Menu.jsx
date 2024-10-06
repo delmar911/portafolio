@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Menu = () => {
   return (
     // Componente Nav por semantica
-    <nav className="flex justify-between h-10 col-span-2 col-start-2 text-white bg-black rounded-lg menu font-poppins">
+    <nav className="flex h-10 col-span-2 col-start-2 text-white bg-black rounded-lg space-x-14 menu font-poppins">
     
       <NavLink
         className={({ isActive }) => (isActive ? "active-link" : null)}

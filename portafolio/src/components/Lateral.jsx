@@ -5,16 +5,16 @@ import { faGithub, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 const Lateral = () => {
   return (
     <>
-      <aside className='row-start-2 text-white rounded-[1rem] bg-slate-950 lateralCard p-6 m-1'>
+      <aside className='  row-start-2 text-white rounded-[1rem] bg-slate-950 lateralCard p-6 m-1'>
         <p>Maria Del Mar Artunduaga</p>
         <div>
           <img src="../assets/img/foto-portafolio.png" alt=""/>
         </div>
         <p className=''>FULL-STACK DEVELOPER</p>
-        <div className="location">
+        <div className="flex space-y-32 location">
           <FontAwesomeIcon icon={faLocationDot} /> Bogotá, Colombia
         </div>
-        <div className="flex justify-between redes">
+        <div className="flex space-x-4 redes">
           <FontAwesomeIcon icon={faEnvelope} />
           <FontAwesomeIcon icon={faGithub} />
           <FontAwesomeIcon icon={faWhatsapp} />
