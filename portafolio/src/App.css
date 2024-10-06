@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  html {
+    @apply bg-[url('./src/assets/img/Onda-sonido.jpg')] bg-cover bg-center bg-no-repeat h-screen;
+  }
+
+  body{
+    @apply absolute inset-0 bg-gradient-to-br from-[#4b03ad] via-[#5d115d] to-[#0d0923] opacity-75 ;
+  }
+  #root{
+    @apply grid grid-cols-[250px_1fr] grid-rows-[auto_1fr] h-screen gap-2;
+  }
+  main{
+    @apply row-start-2;
+  }
+}
