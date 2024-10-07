@@ -2,7 +2,7 @@
 
 export { Home } from './Home'
 export { Acerca } from './Acerca'
-export { Contact } from './contact'
+export { Contact } from './Contact'
 export { Proyects } from './proyects'
 export {Resume} from './resume'
 export { Error404 } from './Error404'

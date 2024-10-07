@@ -1,10 +1,9 @@
 import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Menu = () => {
   return (
     // Componente Nav por semantica
-    <nav className="flex h-10 col-span-2 col-start-2 text-white bg-black rounded-lg space-x-14 menu font-poppins">
+    <nav className="flex justify-around mt-2 mr-4 col-span-2 col-start-2 text-white bg-black/[0.5] rounded-lg p-2">
     
       <NavLink
         className={({ isActive }) => (isActive ? "active-link" : null)}

@@ -5,7 +5,7 @@ import { faGithub, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 const Lateral = () => {
   return (
     <>
-      <aside className='  row-start-2 text-white rounded-[1rem] bg-slate-950 lateralCard p-6 m-1'>
+      <aside className='row-start-1 row-span-3 text-white rounded-[1rem] bg-black/[0.75] lateralCard p-6 m-2'>
         <p>Maria Del Mar Artunduaga</p>
         <div>
           <img src="../assets/img/foto-portafolio.png" alt=""/>
