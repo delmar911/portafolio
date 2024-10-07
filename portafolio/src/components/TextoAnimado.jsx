@@ -16,12 +16,12 @@ const TextoAnimado = ({ textos = ["Soy Maria del Mar Artunduaga"] }) => {
   }, [textos.length]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-24 overflow-hidden">
+    <div className="flex flex-col w-full h-full overflow-hidden">
       {textos.map((texto, index) => (
         <h1 
           key={index}
-          className={`text-4xl font-bold text-slate-950 transition-all duration-1000 ease-out absolute ${
-            index === visibleIndex
+          className={`text-3xl font-bold text-slate-800 transition-all duration-1000 ease-out space-y-3 ${
+            index <= visibleIndex
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-full'
           }`}
