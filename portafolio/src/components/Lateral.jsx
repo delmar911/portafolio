@@ -7,8 +7,8 @@ const Lateral = () => {
     <>
       <aside className='row-start-1 row-span-3 text-white rounded-[1rem] bg-black/[0.75] lateralCard p-6 m-2'>
         <p>Maria Del Mar Artunduaga</p>
-        <div>
-          <img src="../assets/img/foto-portafolio.png" alt=""/>
+        <div className='h-44'>
+          <img src="../assets/img/foto-portafolio.png" alt="foto portafolio"/>
         </div>
         <p className=''>FULL-STACK DEVELOPER</p>
         <div className="flex space-y-32 location">

@@ -1,4 +1,5 @@
 import React from 'react'
+import TextoAnimado from '../components/TextoAnimado'
 
 export const Home = () => {
   return (
@@ -7,8 +8,9 @@ export const Home = () => {
         <div className="">
           <div className='flex flex-col items-center'>
             <h1 className='text-4xl font-bold pb-7'>
-            Soy Maria del Mar Artunduaga
+            
             </h1>
+            <TextoAnimado texto="Soy Maria del Mar Artunduaga" />
             <p className='font-light text-center w-96 pb-7'>
             Desarrolladora de software FullStack
             </p>
