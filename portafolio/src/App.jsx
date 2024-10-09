@@ -20,7 +20,7 @@ function App() {
         
           <Lateral />
           <Menu />
-        
+          
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/proyectos" element={<Proyects />} />
