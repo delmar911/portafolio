@@ -1,42 +1,49 @@
 import { NavLink } from "react-router-dom";
-
-
+import { useTranslation } from 'react-i18next';
 const Menu = () => {
+  const { t } = useTranslation();
   return (
-    // Componente Nav por semantica
-    <nav className="flex justify-around mt-2 mr-4 col-span-2 col-start-2 text-white bg-black/[0.5] rounded-lg p-2">
+    <nav className="menu-nav">
       <NavLink
-        className={({ isActive }) => (isActive ? "active-link" : null)}
+        className={({ isActive }) => 
+          `menu-link ${isActive ? "active-link" : ""}`
+        }
         to={"/"}
       >
-        Inicio
+        {t('navbar.home')}
       </NavLink>
       <NavLink
-        className={({ isActive }) => (isActive ? "active-link" : null)}
+        className={({ isActive }) => 
+          `menu-link ${isActive ? "active-link" : ""}`
+        }
         to={"/proyectos"}
       >
-        Proyectos
+        {t('navbar.projects')}
       </NavLink>
       <NavLink
-        className={({ isActive }) => (isActive ? "active-link" : null)}
+        className={({ isActive }) => 
+          `menu-link ${isActive ? "active-link" : ""}`
+        }
         to={"/acerca"}
       >
-        Acerca de mi
+        {t('navbar.about')}
       </NavLink>
       <NavLink
-        className={({ isActive }) => (isActive ? "active-link" : null)}
+        className={({ isActive }) => 
+          `menu-link ${isActive ? "active-link" : ""}`
+        }
         to={"/resumen"}
       >
-        Resumen
+        {t('navbar.education')}
       </NavLink>
       <NavLink
-        className={({ isActive }) => (isActive ? "active-link" : null)}
+        className={({ isActive }) => 
+          `menu-link ${isActive ? "active-link" : ""}`
+        }
         to={"/contacto"}
       >
-        Contacto
+       {t('navbar.contact')}
       </NavLink>
-
-      
     </nav>
   );
 };

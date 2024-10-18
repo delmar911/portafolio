@@ -13,12 +13,12 @@ const images = [js, html, react, tailwind, java, github, linux, django, mysql];
 
 export const Carrusel = () => {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden carrusel mt-8">
       <div className="flex animate-carousel">
         {[...Array(2)].map((_, i) => (
-          <div key={i} className="flex space-x-16 min-w-full">
+          <div key={i} className="flex space-x-4 sm:space-x-8 md:space-x-10 lg:space-x-14 min-w-full">
             {images.map((src, index) => (
-              <img key={index} src={src} alt="" className="w-14 h-14 object-contain" />
+              <img key={index} src={src} alt="" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 object-contain" />
             ))}
           </div>
         ))}

@@ -1,0 +1,34 @@
+{
+    "header": {
+        "title": "Hi, I'm  Maria Del Mar Artunduaga",
+        "description": "Web Developer",
+        "contactme":"Contact me"
+    },
+    "sobremi": {
+        "title": "About me",
+        "description": "I am a Full Stack Web Developer with knowledge in OOP, Databases, TypeScript, TailwindCSS, NextJs and ReactJs, in addition to other technologies, to always stay at the forefront with the most in-demand languages. I am responsible, autonomous, self-taught and a leader, which allows me to seek the best solutions to any problem. I love learning from different areas and I am sure I can contribute to the success of your company. Let's work together to make our dreams come true!"
+    },
+    "navbar": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact",
+        "education":"Education"
+    },
+   
+    "titles": {
+        "services": "SERVICES",
+        "projects": "PROJECTS",
+        "testimonials": "TESTIMONIALS",
+        "contact": "CONTACT",
+        "typeprojects": "Project Type",
+        "typetech": "Technology Type"
+    },
+   "texts": {
+    "hello": "Hi everybody!",
+    "im": "I'm Maria del Mar Artunduaga",
+    "do": "FULL-STACK DEVELOPER",
+    "creating": "Creating innovative solutions with code",
+    "downloadCV": "Download CV"
+  }
+}
