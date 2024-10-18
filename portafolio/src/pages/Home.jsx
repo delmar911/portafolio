@@ -20,9 +20,9 @@ export const Home = () => {
     <main>
       <div className='flex flex-col items-center justify-center w-full h-full p-8'>
         <div className="">
-          <div className='flex flex-col w-full h-full mt-4'>
+          <div className='flex flex-col w-full h-full mt-4 text-white ' >
             {texts.length > 0 && <TextoAnimado textos={texts} />}
-            <p className='mt-4 font-medium text-center w-96 pb-7 text-slate-700'>
+            <p className='mt-4 font-medium text-center text-white text-3xl'>
               {t('texts.creating')}
             </p>
           </div>
