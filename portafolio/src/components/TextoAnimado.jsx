@@ -10,7 +10,7 @@ const TextoAnimado = ({ textos = ["Soy Maria del Mar Artunduaga"] }) => {
       );
     };
 
-    const timer = setInterval(showNextText, 2000); // Cambia cada 2 segundos
+    const timer = setInterval(showNextText, 2000); // cambia cada 2 segundos
 
     return () => clearInterval(timer);
   }, [textos.length]);

@@ -27,9 +27,12 @@ export const Home = () => {
             </p>
           </div>
         </div>
-        <div className='p-3 text-white bg-purple-600 rounded-lg '>
-          <button type="download"> {t('texts.downloadCV')} <FontAwesomeIcon icon={faDownload} /></button>
-        </div>
+        
+          <div className='pt-16' >
+            <button type="download" className='p-3 text-white bg-purple-600 rounded-lg '> {t('texts.downloadCV')} <FontAwesomeIcon icon={faDownload} /></button>
+          </div>
+        
+        
       </div>
     </main>
   );

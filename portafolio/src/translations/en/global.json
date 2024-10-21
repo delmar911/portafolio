@@ -30,5 +30,8 @@
     "do": "FULL-STACK DEVELOPER",
     "creating": "Creating innovative solutions with code",
     "downloadCV": "Download CV"
+  },
+  "contact":{
+    "paragrah":"These are the means by which you can contact me, it is a pleasure to work together with you."
   }
 }
