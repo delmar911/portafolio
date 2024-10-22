@@ -1,4 +1,5 @@
 import i18n from 'i18next';
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faEnvelope, faLanguage } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faWhatsapp, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
@@ -15,8 +16,8 @@ const Lateral = () => {
   };
 
   return (
-    <aside className="lateral-card">
-      <p className="text-xl md:text-2xl mb-2">Maria Del Mar Artunduaga</p>
+    <aside className="lateral-card ">
+      <p className="text-2xl md:text-2xl mb-2 text-center ">Maria Del Mar Artunduaga</p>
       <img src={mifoto} alt="foto mar" className="w-32 md:w-48 mb-2" />
       <p className="text-2xl md:text-2xl mb-2">{t('header.description')}</p>
       <div className="p-2 md:p-4">
@@ -33,23 +34,11 @@ const Lateral = () => {
           </span>
         </button>
       </div>
-      <div className="h-16 md:h-20 space-x-3 md:space-x-4 redes pt-2 md:pt-3">
-        <a href="mailto:mariadelmar.artunduaga911@gmail.com">
-          <FontAwesomeIcon icon={faEnvelope} className="w-6 h-6 md:w-7 md:h-7" />
-        </a>
-        <a href="https://github.com/delmar911">
-          <FontAwesomeIcon icon={faGithub} className="w-6 h-6 md:w-7 md:h-7" />
-        </a>
-        <a href="https://wa.me/qr/UIUPFYPPGGOFE1">
-          <FontAwesomeIcon icon={faWhatsapp} className="w-6 h-6 md:w-7 md:h-7" />
-        </a>
-        <a href="https://www.linkedin.com/in/mariadelmarartunduaga/">
-          <FontAwesomeIcon icon={faLinkedinIn} className="w-6 h-6 md:w-7 md:h-7" />
-        </a>
-      </div>
-      <button type="button" className="p-2 md:p-3 bg-violet-800 rounded-lg mt-2">
+     
+      <NavLink className="pt-24 md:p-3 bg-violet-800 rounded-lg mt-2" to={"/contacto"}>
         {t('header.contactme')}
-      </button>
+      </NavLink>
+     
     </aside>
   );
 };

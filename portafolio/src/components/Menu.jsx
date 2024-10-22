@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
+
 const Menu = () => {
   const { t } = useTranslation();
+
   return (
     <nav className="menu-nav">
       <NavLink
@@ -42,7 +44,7 @@ const Menu = () => {
         }
         to={"/contacto"}
       >
-       {t('navbar.contact')}
+        {t('navbar.contact')}
       </NavLink>
     </nav>
   );

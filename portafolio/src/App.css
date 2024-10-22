@@ -6,28 +6,36 @@
   html {
     @apply bg-[url('./src/assets/img/Onda3.jpg')] bg-cover bg-center bg-no-repeat min-h-screen ;
   }
- 
   #root {
     @apply grid grid-cols-1 md:grid-cols-[300px_1fr] grid-rows-[auto_auto_1fr] md:grid-rows-[auto_1fr] min-h-screen gap-2 ; background: linear-gradient(to right, rgba(57, 1, 97, 0.8), rgba(128, 0, 128, 0.8), rgba(250, 105, 255, 0.8));
   }
-
   main {
     @apply row-start-3 md:row-start-2 md:col-start-2;
   }
-
-  .active-link {
-    @apply border-b border-white pb-2 font-bold;
-  }
-
   .lateral-card {
     @apply row-start-1 md:row-span-2 text-white rounded-[1rem] bg-black/[0.75] p-6 m-2 flex flex-col items-center;
   }
-
   .menu-nav {
     @apply flex flex-wrap justify-center md:justify-around mt-2 mx-2 md:mx-4 col-span-1 md:col-span-2 md:col-start-2 text-white rounded-lg p-2;
   }
-
+  
   .menu-link {
-    @apply px-2 py-1 md:px-4 md:py-2;
+    @apply px-2 py-1 md:px-4 md:py-2 relative;
   }
+  
+  .menu-link::before {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-[2px] bg-white z-10 transition-all duration-300 ease-in-out;
+  }
+  
+  /* Estado de hover: anima la línea */
+  .menu-link:hover::before {
+    @apply w-full;
+  }
+  
+  /* Estado activo: línea completamente visible */
+  .active-link::before {
+    @apply w-full;
+  }
+  
 }

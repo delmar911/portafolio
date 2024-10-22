@@ -29,7 +29,10 @@ export const Home = () => {
         </div>
         
           <div className='pt-16' >
-            <button type="download" className='p-3 text-white bg-purple-600 rounded-lg '> {t('texts.downloadCV')} <FontAwesomeIcon icon={faDownload} /></button>
+            <a href="../documents/MariaDelMarHojadeVida.pdf" download="hojadevidaMariaDelMar" className='p-3 text-white bg-purple-600 rounded-lg '> 
+              {t('texts.downloadCV')}
+              <FontAwesomeIcon icon={faDownload} />
+            </a>
           </div>
         
         

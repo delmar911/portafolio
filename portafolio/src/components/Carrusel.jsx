@@ -6,8 +6,8 @@ import tailwind from '../assets/img-carrusel/Tailwind.png';
 import java from '../assets/img-carrusel/java.png';
 import github from '../assets/img-carrusel/github.png';
 import linux from '../assets/img-carrusel/linux.png';
-import django from '../assets/img-carrusel/django.png';
-import mysql from '../assets/img-carrusel/mysql.png'
+import django from '../assets/img-carrusel/django.svg';
+import mysql from '../assets/img-carrusel/mysql.png';
 
 const images = [js, html, react, tailwind, java, github, linux, django, mysql];
 
