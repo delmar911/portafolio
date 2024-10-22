@@ -33,5 +33,22 @@
   },
   "contact":{
     "paragrah":"These are the means by which you can contact me, it is a pleasure to work together with you."
+  },
+   
+ "education":{
+    "firstTitle": "Software Analysis and Development Technologist",
+    "latest": "Latest",
+    "firstTime": "January 2023 - April 2025",
+    "firstDescription":"· Projects: Platform for people with speech limitations (Text to Speech)",
+    "secondDescription":"· Technologies: Python, Django, Postman, Javascript, HTML,GitHub, Git, AI.",
+    "secondTitle": "BOOTCAMP Digital Women",
+    "secondTime": "September 2024 - November 2024",
+    "thirdDescription":"· Projects: Portfolio",
+    "fourthDescription":"· Technologies: React, Redux, Tailwind.",
+    "thirdTitle": "Software Programming Technician",
+    "thirdTime": "January 2020 - November 2022",
+    "fifthDescription":"· Projects: Inventory system for a company",
+    "sixthDescription":"· Technologies: PHP, Mysql, HTML, CSS."
   }
+
 }

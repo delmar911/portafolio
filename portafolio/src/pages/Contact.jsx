@@ -15,12 +15,12 @@ export const Contact = () => {
         <div className="">
           <div className="flex flex-col items-center">
             <h1 className="text-4xl font-bold pb-7">{t("header.contactme")}</h1>
-            <p className="font-light text-center w-96 pb-7">
+            <p className=" text-center w-96 pb-7">
               {t("contact.paragrah")}
             </p>
           </div>
 
-          <div className="space-x-10 flex justify-center">
+          <div className="space-x-10 flex justify-center pt-8">
             <a href="mailto:mariadelmar.artunduaga911@gmail.com">
               <FontAwesomeIcon
                 icon={faEnvelope}
