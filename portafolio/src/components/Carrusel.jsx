@@ -1,4 +1,3 @@
-import React from 'react';
 import js from '../assets/img-carrusel/js.png';
 import html from '../assets/img-carrusel/html.png';
 import react from '../assets/img-carrusel/react.png';
