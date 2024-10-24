@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'; 
+import pdfFile from '../documents/MariaDelMarHojadeVida.pdf'
 import TextoAnimado from '../components/TextoAnimado';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
@@ -29,7 +30,7 @@ export const Home = () => {
         </div>
         
           <div className='pt-16' >
-            <a href="../documents/MariaDelMarHojadeVida.pdf" download="hojadevidaMariaDelMar" className='p-3 text-white bg-purple-600 rounded-lg '> 
+            <a href={pdfFile} download="hojadevidaMariaDelMar" className='p-3 text-white bg-purple-600 rounded-lg '> 
               {t('texts.downloadCV')}
               <FontAwesomeIcon icon={faDownload} />
             </a>
