@@ -9,7 +9,11 @@ export const Proyects = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {Data.map((project) => (
           <div key={project.id} className="bg-indigo-950 border border-gray-200 rounded-lg shadow">
-            <a href={project.deploy}>
+            <a 
+              href={project.deploy !== '#' ? project.deploy : project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 className="rounded-t-lg w-full"
                 src={project.img}
@@ -17,7 +21,11 @@ export const Proyects = () => {
               />
             </a>
             <div className="p-5">
-              <a href={project.deploy}>
+              <a 
+                href={project.deploy !== '#' ? project.deploy : project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
                   {project.title}
                 </h5>
@@ -40,30 +48,37 @@ export const Proyects = () => {
 
               {/* Botones de sitioweb y GitHub */}
               <div className="flex gap-4">
-                
-                <a  href={project.deploy}
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
-                >
-                  Sitio web
-                  <svg
-                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 14 10"
+                {project.deploy !== '#' && (
+                  <a
+                    href={project.deploy}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
                   >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9"
-                    />
-                  </svg>
-                </a>
+                    Sitio web
+                    <svg
+                      className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 14 10"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9"
+                      />
+                    </svg>
+                  </a>
+                )}
                 
-                 <a href={project.github}
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300"
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300"
                 >
                   GitHub
                 </a>
