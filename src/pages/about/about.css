@@ -18,7 +18,7 @@
   }
 
   .about-grid {
-    @apply grid grid-cols-2 gap-16 items-start;
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start;
   }
 
   .about-text p {

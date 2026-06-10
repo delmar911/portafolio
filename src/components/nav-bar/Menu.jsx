@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import "./nav-bar.css"
 
 const Menu = () => {
@@ -8,10 +9,11 @@ const Menu = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [activeId, setActiveId] = useState(location.pathname === '/' ? 'home' : null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleScrollTo = (e, id) => {
     e.preventDefault();
-    // If we're already on the home route, scroll directly
+    setIsOpen(false);
     if (location.pathname === "/") {
       const el = document.getElementById(id);
       if (el) {
@@ -19,7 +21,6 @@ const Menu = () => {
         return;
       }
     }
-    // Otherwise navigate to home and request scroll after navigation
     navigate("/", { state: { scrollTo: id } });
   };
 
@@ -30,7 +31,6 @@ const Menu = () => {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        // pick the entry with largest intersectionRatio that's intersecting
         const visible = entries.filter((en) => en.isIntersecting);
         if (visible.length > 0) {
           visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
@@ -44,16 +44,20 @@ const Menu = () => {
     return () => observer.disconnect();
   }, [location.pathname]);
 
-  return (
-    <nav className="nav-bar">
-      <span className="nav-brand">Maria Del Mar</span>
-      <div className="menu-link">
-        <NavLink
-          className={({ isActive }) => `nav-link ${(isActive || activeId === 'home') ? 'active-link' : ''}`}
-          to={"/"}
-        >
-          {t('navbar.home')}
-        </NavLink>
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
+  const navLinks = (
+    <>
+      <NavLink
+        className={({ isActive }) => `nav-link ${(isActive || activeId === 'home') ? 'active-link' : ''}`}
+        to={"/"}
+        onClick={() => setIsOpen(false)}
+      >
+        {t('navbar.home')}
+      </NavLink>
       <a
         href="/#projects"
         onClick={(e) => handleScrollTo(e, 'projects')}
@@ -71,6 +75,7 @@ const Menu = () => {
       <NavLink
         className={({ isActive }) => `nav-link ${isActive ? 'active-link' : ''}`}
         to={"/resumen"}
+        onClick={() => setIsOpen(false)}
       >
         {t('navbar.education')}
       </NavLink>
@@ -81,8 +86,36 @@ const Menu = () => {
       >
         {t('navbar.contact')}
       </a>
+    </>
+  );
+
+  return (
+    <nav className="nav-bar">
+      <span className="nav-brand">Maria Del Mar</span>
+
+      {/* Desktop links */}
+      <div className="menu-link">
+        {navLinks}
       </div>
-      
+
+      {/* Hamburger button — mobile only */}
+      <button
+        className="md:hidden text-blush p-1"
+        onClick={() => setIsOpen((prev) => !prev)}
+        aria-label="Toggle menu"
+      >
+        {isOpen
+          ? <XMarkIcon className="w-5 h-5" />
+          : <Bars3Icon className="w-5 h-5" />
+        }
+      </button>
+
+      {/* Mobile dropdown */}
+      {isOpen && (
+        <div className="menu-mobile">
+          {navLinks}
+        </div>
+      )}
     </nav>
   );
 };

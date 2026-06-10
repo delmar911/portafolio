@@ -52,8 +52,8 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-wine py-20 px-10">
-      <div className="max-w-4xl mx-auto grid grid-cols-2 gap-16 items-center">
+    <section id="contact" className="bg-wine py-14 lg:py-20 px-5 md:px-10">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
         <div>
           <div className="text-xs text-blush tracking-[0.15em] uppercase mb-2 flex items-center gap-2">

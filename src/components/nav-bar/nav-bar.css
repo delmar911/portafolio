@@ -4,7 +4,7 @@
 
 @layer components {
   .nav-bar {
-    @apply bg-wine text-blush px-10 flex items-center justify-between h-[60px] sticky top-0 z-[100] w-full;
+    @apply bg-wine text-blush px-5 md:px-10 flex items-center justify-between h-[60px] sticky top-0 z-[100] w-full relative;
   }
 
   .nav-brand {
@@ -12,7 +12,11 @@
   }
 
   .menu-link {
-    @apply flex gap-8 items-center;
+    @apply hidden md:flex gap-8 items-center;
+  }
+
+  .menu-mobile {
+    @apply absolute top-full left-0 w-full bg-wine border-t border-blush/10 flex flex-col py-4 px-5 gap-5 z-50;
   }
 
   .nav-link {
