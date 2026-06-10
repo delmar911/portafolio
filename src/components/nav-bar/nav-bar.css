@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-bar {
+    @apply bg-wine text-blush px-10 flex items-center justify-between h-[60px] sticky top-0 z-[100] w-full;
+  }
+
+  .nav-brand {
+    @apply font-dm-serif text-pale text-lg tracking-wide whitespace-nowrap;
+  }
+
+  .menu-link {
+    @apply flex gap-8 items-center;
+  }
+
+  .nav-link {
+    @apply text-blush text-xs tracking-[0.05em] uppercase no-underline
+           transition-colors duration-200 hover:text-pale whitespace-nowrap;
+  }
+
+  .active-link {
+    @apply text-cream font-semibold underline decoration-rose/40 underline-offset-4;
+  }
+}

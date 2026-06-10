@@ -31,6 +31,14 @@
     "creating": "Creating innovative solutions with code",
     "downloadCV": "Download CV"
   },
+   "hero":{
+    "tagline": "Construyo interfaces funcionales y experiencias digitales que conectan diseño con código limpio.",
+    "btn-view-projects": "View projects",
+    "btn-download-cv": "Download CV",
+    "stat-label":"Completed Projects",
+    "stat-label-training":"Years of training",
+    "stat-label-principal": "Main stack"
+  },
   "contact":{
     "paragrah":"These are the means by which you can contact me, it is a pleasure to work together with you."
   },
@@ -48,7 +56,11 @@
     "thirdTitle": "Software Programming Technician",
     "thirdTime": "January 2020 - November 2022",
     "fifthDescription":"· Projects: Inventory system for a company",
-    "sixthDescription":"· Technologies: PHP, Mysql, HTML, CSS."
-  }
+    "sixthDescription":"· Technologies: PHP, Mysql, HTML, CSS.",
+    "uniTitle": "Software Engineering",
+    "uniSub": "Politécnico Grancolombiano · 6th semester",
+    "uniTime": "2023 – present",
+    "uniInst1": "SENA"
 
+  }
 }

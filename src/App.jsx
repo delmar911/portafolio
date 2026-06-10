@@ -8,8 +8,7 @@ import {
   Resume,
   Contact,
 } from "./pages";
-import Menu from "./components/Menu";
-import Lateral from "./components/Lateral";
+import Menu from "./components/nav-bar/Menu";
 import "./App.css";
 
 function App() {
@@ -18,15 +17,14 @@ function App() {
       {/* Enrutador general */}
       <BrowserRouter>
         
-          <Lateral />
-          <Menu />
-          
+          {/* <Lateral /> */}
+          <Menu />       
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/proyectos" element={<Proyects />} />
-          <Route path="/acerca" element={<Acerca />} />
-          <Route path="/resumen" element={<Resume />} />
-          <Route path="/contacto" element={<Contact />} />
+          <Route path="/proyectos" element={<Home />} />
+          <Route path="/acerca" element={<Home />} />
+          <Route path="/resumen" element={<Home />} />
+          <Route path="/contacto" element={<Home />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>

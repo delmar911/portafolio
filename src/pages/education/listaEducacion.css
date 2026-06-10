@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .section-label {
+    @apply text-xs text-deep tracking-[0.15em] uppercase mb-2 flex items-center gap-2;
+  }
+
+  .before-section-label {
+    @apply w-8 h-px bg-deep block;
+  }
+
+  .section-title {
+    @apply font-dm-serif text-[2.4rem] text-dark leading-[1.15] mb-12;
+  }
+  .edu-timeline {
+    @apply relative pl-8 max-w-2xl mx-auto;
+  }
+
+  /* Línea vertical */
+  .edu-line {
+    @apply absolute left-[.55rem] top-2 bottom-2 w-px bg-deep/20;
+  }
+
+  /* Item wrapper */
+  .edu-item {
+    @apply relative mb-7 last:mb-0;
+  }
+
+  /* Punto del timeline */
+  .edu-dot {
+    @apply absolute -left-[1.45rem] top-[.35rem] w-[10px] h-[10px] rounded-full bg-deep/35;
+  }
+
+  .edu-dot--active {
+    @apply bg-deep;
+  }
+
+  /* Card base */
+  .edu-card {
+    @apply bg-wine/[0.04] border border-deep/[0.12] rounded-lg px-5 py-4;
+  }
+
+  /* Card activa (en curso) — ligeramente más destacada */
+  .edu-card--active {
+    @apply bg-wine/[0.07] border-deep/20;
+  }
+
+  .edu-card-header {
+    @apply flex items-center gap-3 flex-wrap mb-1;
+  }
+
+  .edu-title {
+    @apply font-dm-serif text-[1.05rem] text-dark font-normal;
+  }
+
+  .edu-badge {
+    @apply bg-deep/[0.12] border border-deep/25 text-wine
+           text-[.68rem] tracking-[.08em] uppercase
+           px-[.65rem] py-[.18rem] rounded-sm;
+  }
+
+  .edu-sub {
+    @apply block text-xs text-mid font-light mb-1;
+  }
+
+  .edu-time {
+    @apply block text-[.8rem] text-deep;
+  }
+}
+
+/* Animación de entrada */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down {
+  opacity: 0;
+  animation: fadeInDown 0.45s ease-out forwards;
+}

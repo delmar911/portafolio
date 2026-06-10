@@ -25,9 +25,17 @@
   "texts":{
     "hello":"¡Hola a todos!",
     "im":"Soy Maria del Mar Artunduaga",
-    "do":"Desarrolladora de Software FullStack",
+    "do":"Desarrolladora Fullstack",
     "creating": "Creando soluciones innovadoras con codigo",
     "downloadCV": "Descargar CV"
+  },
+  "hero":{
+    "tagline": "Construyo interfaces funcionales y experiencias digitales que conectan diseño con código limpio.",
+    "btn-view-projects": "Ver proyectos",
+    "btn-download-cv": "Descargar CV",
+    "stat-label":"Proyectos construidos",
+    "stat-label-training":"Años de formación",
+    "stat-label-principal": "Stack principal"
   },
   "contact":{
     "paragrah":"Estos son los medios por el cual puedes contactarme, es un placer atenderte para trabajar juntos"
@@ -45,6 +53,10 @@
     "thirdTitle":"Técnico en programación de Software",
     "thirdTime":"Enero 2020 - Noviembre del 2022",
     "fifthDescription":"· Proyectos: Sistema de inventario para una empresa",
-    "sixthDescription":"· Tecnologías: PHP, Mysql, HTML, CSS."
+    "sixthDescription":"· Tecnologías: PHP, Mysql, HTML, CSS.",
+    "uniTitle": "Ingeniería de Software",
+    "uniSub": "Politécnico Grancolombiano · 7.º semestre",
+    "uniTime": "2023 – presente",
+    "uniInst1": "SENA"
   }
 }

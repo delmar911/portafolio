@@ -1,6 +1,5 @@
-import React from 'react'
 import { useTranslation } from 'react-i18next';
-import ListaEducacion from "../components/ListaEducacion";
+import ListaEducacion from "./education/ListaEducacion";
 
 export const Resume = () => {
   const { t } = useTranslation('global'); 

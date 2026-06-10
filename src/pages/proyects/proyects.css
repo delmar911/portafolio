@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .section-label {
+    @apply text-xs text-deep tracking-[0.15em] uppercase mb-2 flex items-center gap-2;
+  }
+
+  .before-section-label {
+    @apply w-8 h-px bg-deep block;
+  }
+
+  .section-title {
+    @apply font-dm-serif text-[2.4rem] text-dark leading-[1.15] mb-12;
+  }
+
+  .projects-grid {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6;
+  }
+
+  .project-card {
+    @apply bg-white rounded-xl overflow-hidden border border-deep/[0.08] transition-transform duration-200 hover:-translate-y-1;
+  }
+
+  .project-preview {
+    @apply relative h-40 overflow-hidden;
+  }
+
+  /* Imagen desenfocada por defecto, se revela al hacer hover */
+  .preview-img {
+    @apply w-full h-full object-cover transition-all duration-500;
+    filter: blur(2px) brightness(0.5);
+  }
+
+  .project-card:hover .preview-img {
+    filter: blur(0) brightness(1);
+  }
+
+  .preview-overlay {
+    @apply absolute inset-0 flex items-center justify-center transition-opacity duration-500;
+  }
+
+  .project-card:hover .preview-overlay {
+    @apply opacity-0;
+  }
+
+  .preview-title {
+    @apply font-dm-serif text-2xl italic text-white;
+  }
+
+  .project-body {
+    @apply p-5;
+  }
+
+  .project-name {
+    @apply text-base font-medium text-dark mb-2;
+  }
+
+  .project-desc {
+    @apply text-xs text-mid leading-relaxed mb-4 font-light;
+  }
+
+  .project-stack {
+    @apply flex flex-wrap gap-1 mb-4;
+  }
+
+  .tag {
+    @apply bg-pale text-deep px-2 py-0.5 rounded-sm text-[0.72rem] tracking-wide font-medium;
+  }
+
+  .project-links {
+    @apply flex gap-2;
+  }
+
+  .link-btn {
+    @apply px-3 py-1.5 rounded-sm text-xs no-underline font-medium tracking-wide transition-colors duration-150;
+  }
+
+  .link-web {
+    @apply bg-deep text-pale hover:bg-wine;
+  }
+
+  .link-gh {
+    @apply border border-deep text-deep hover:bg-pale;
+  }
+}

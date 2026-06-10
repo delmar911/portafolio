@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .hero {
+    @apply min-h-[80vh] text-blush bg-wine grid grid-cols-2 items-center px-10 pt-16 pb-12 gap-12 relative overflow-hidden;
+  }
+
+  .hero-eyebrow {
+    @apply text-xs text-blush tracking-[0.15em] uppercase mb-5 flex items-center gap-3;
+  }
+
+  .before-hero-eyebrow {
+    @apply w-8 h-px bg-rose block;
+  }
+
+  /* font-dm-serif viene del tailwind.config.js — no usar font-['DM_Serif_Display',serif] */
+  .hero-name {
+    @apply font-dm-serif text-[3.8rem] leading-[1.05] text-pale mb-1;
+  }
+
+  .hero-role {
+    @apply text-base text-rose mb-6 font-light tracking-wide;
+  }
+
+  .hero-tagline {
+    @apply text-[1.05rem] text-blush/75 leading-relaxed max-w-md mb-9 font-light;
+  }
+
+  .hero-actions {
+    @apply flex gap-4 flex-wrap;
+  }
+
+  .btn-primary {
+    @apply bg-pale text-wine px-7 py-3 rounded-sm text-sm font-medium no-underline tracking-wide
+           transition-colors duration-200 hover:bg-cream cursor-pointer;
+  }
+
+  .btn-outline {
+    @apply border border-blush/40 text-pale px-7 py-3 rounded-sm text-sm font-light no-underline tracking-wide
+           transition-colors duration-200 hover:border-blush hover:text-blush;
+  }
+
+  .hero-visual {
+    @apply relative z-10 flex flex-col gap-4;
+  }
+
+  .hero-stats-row {
+    @apply grid grid-cols-2 gap-4;
+  }
+
+  /* blush/[0.08] usa la sintaxis de opacidad de Tailwind v3 con colores custom */
+  .hero-stat-card {
+    @apply bg-blush/[0.08] border border-blush/[0.15] rounded-lg px-5 py-5;
+  }
+
+  .stat-num {
+    @apply font-dm-serif text-[2.2rem] text-pale leading-none;
+  }
+
+  .stat-label {
+    @apply text-xs text-blush mt-1 tracking-wide;
+  }
+
+  .stack-pills {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .pill {
+    @apply bg-blush/10 border border-blush/20 text-blush px-3 py-1 rounded-sm text-xs tracking-wide;
+  }
+
+  .section-projects {
+    @apply bg-pale py-20 px-10;
+  }
+
+  .section-about-me {
+    @apply py-20 px-10 bg-nude;
+  }
+  .section-education{
+    @apply bg-pale py-20 px-10;
+  }
+
+}

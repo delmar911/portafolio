@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* section-label y before-section-label se reusan de proyects.css
+     Si los centralizas en un global.css, puedes borrarlos de aquí */
+  .section-label {
+    @apply text-xs text-deep tracking-[0.15em] uppercase mb-2 flex items-center gap-2;
+  }
+
+  .before-section-label {
+    @apply w-8 h-px bg-deep block;
+  }
+
+  .section-title {
+    @apply font-dm-serif text-[2.4rem] text-dark leading-[1.15] mb-12;
+  }
+
+  .about-grid {
+    @apply grid grid-cols-2 gap-16 items-start;
+  }
+
+  .about-text p {
+    @apply text-sm leading-relaxed text-mid font-light mb-4;
+  }
+
+  /* Card oscura con skills agrupados */
+  .skills-section {
+    @apply bg-wine rounded-lg p-8;
+  }
+
+  .skills-group {
+    @apply mb-6 last:mb-0;
+  }
+
+  .skills-group-name {
+    @apply text-xs text-blush tracking-widest uppercase mb-2;
+  }
+
+  .skills-row {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .skill-chip {
+    @apply bg-blush/10 border border-blush/20 text-pale px-3 py-1 rounded-sm text-xs;
+  }
+}
