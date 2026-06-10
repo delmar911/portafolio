@@ -29,7 +29,7 @@ const LINKS = [
 
 export const Contact = () => {
   const { t } = useTranslation("global");
-  const [status, setStatus] = useState("idle"); // idle | sending | ok | error
+  const [status, setStatus] = useState("idle");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -55,7 +55,6 @@ export const Contact = () => {
     <section id="contact" className="bg-wine py-20 px-10">
       <div className="max-w-4xl mx-auto grid grid-cols-2 gap-16 items-center">
 
-        {/* Izquierda — info de contacto */}
         <div>
           <div className="text-xs text-blush tracking-[0.15em] uppercase mb-2 flex items-center gap-2">
             <span className="w-8 h-px bg-blush block" />
@@ -86,7 +85,6 @@ export const Contact = () => {
           </div>
         </div>
 
-        {/* Derecha — formulario */}
         <div className="bg-blush/[0.06] border border-blush/10 rounded-xl p-8">
           <p className="text-blush/60 text-xs tracking-widest uppercase mb-6">
             Envíame un mensaje
