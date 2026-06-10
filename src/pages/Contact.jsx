@@ -151,7 +151,7 @@ export const Contact = () => {
             </button>
 
             {status === "ok" && (
-              <p className="text-xs text-deep text-center mt-1">
+              <p className="text-xs text-rose text-center mt-1">
                 ¡Mensaje enviado! Te respondo pronto.
               </p>
             )}
